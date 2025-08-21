@@ -350,3 +350,30 @@ window.addEventListener("load", () => {
 
 
 // preloader script end 
+// Scroll reveal for hero elements
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    reveals.forEach(el => {
+      const elTop = el.getBoundingClientRect().top;
+      if (elTop < windowHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // trigger on page load
+});
+
+// Optional: emoji follow mouse
+const emojis = document.querySelectorAll('.emoji');
+document.addEventListener('mousemove', (e) => {
+  const { clientX: x, clientY: y } = e;
+  emojis.forEach((emoji, i) => {
+    emoji.style.transform = `translate(${x * (0.01 * (i + 1))}px, ${y * (0.01 * (i + 1))}px)`;
+  });
+});
+

@@ -167,7 +167,7 @@ body {
   display: block;
   width: 26px;
   height: 2.5px;
-  background: var(--text);
+  background: #f5f5f5;
   margin: 6px 0;
   border-radius: 2px;
   transition: transform .2s ease, opacity .2s ease;
@@ -325,6 +325,43 @@ body {
   object-fit: cover;
   border-radius: 24px;
   border: 1px solid var(--border);
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  /* lift and slightly enlarge */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating animation for profile image */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-profile img {
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  /* smooth hover transform */
+}
+
+/* Optional: add slight scale on hover for profile image */
+.hero-profile img:hover {
+  transform: scale(1.05);
 }
 
 /* About mini cards */
@@ -556,7 +593,7 @@ body {
   }
 
   .hero-profile {
-    order: -1;
+    order: 2;
   }
 
   .about-cards {
@@ -761,6 +798,40 @@ body {
   .skills-grid {
     grid-template-columns: 1fr;
     /* one skill card per row */
+  }
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 1000px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left {
+    order: 2;
+    /* move image below text */
+    min-height: auto;
+    /* remove fixed min-height */
+  }
+
+  .about-right {
+    order: 1;
+    /* heading & intro first */
+    width: 100%;
+  }
+
+  .skills-grid {
+    order: 3;
+    /* skill cards after image */
+    width: 100%;
+  }
+
+  .profile-pic {
+    max-width: 80%;
+    min-height: auto;
+    /* ensure proper height */
   }
 }
 
