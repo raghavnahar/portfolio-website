@@ -263,3 +263,90 @@ document.getElementById("closePopup").addEventListener("click", function () {
   document.getElementById("popup").style.display = "none";
 });
 
+
+// preloader script begin
+
+// Simple RN particle preloader with progress bar
+window.addEventListener("load", () => {
+  const canvas = document.getElementById("preloaderCanvas");
+  const ctx = canvas.getContext("2d");
+  const width = canvas.width = 300;
+  const height = canvas.height = 300;
+
+  const particles = [];
+  const logoText = "RN";
+
+  ctx.font = "bold 120px Inter";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+
+  // Draw text and get pixel data
+  ctx.fillText(logoText, width / 2, height / 2);
+  const imageData = ctx.getImageData(0, 0, width, height);
+  ctx.clearRect(0, 0, width, height);
+
+  // Create particles from text pixels
+  for (let y = 0; y < height; y += 4) {
+    for (let x = 0; x < width; x += 4) {
+      const index = (y * width + x) * 4 + 3;
+      if (imageData.data[index] > 128) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          tx: x,
+          ty: y,
+          vx: 0,
+          vy: 0,
+          size: 2
+        });
+      }
+    }
+  }
+
+  const loadingBar = document.getElementById("loadingBar");
+  const loadingPercent = document.getElementById("loadingPercent");
+  let progress = 0;
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    particles.forEach(p => {
+      const dx = p.tx - p.x;
+      const dy = p.ty - p.y;
+      p.vx += dx * 0.1;
+      p.vy += dy * 0.1;
+      p.vx *= 0.8;
+      p.vy *= 0.8;
+      p.x += p.vx;
+      p.y += p.vy;
+
+      ctx.fillStyle = "#7973e0";
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // Simulate loading progress
+  const loadingInterval = setInterval(() => {
+    progress += 1;
+    if (progress > 100) progress = 100;
+    loadingBar.style.width = progress + "%";
+    loadingPercent.textContent = progress + "%";
+
+    if (progress === 100) {
+      clearInterval(loadingInterval);
+      const preloader = document.getElementById("preloader");
+      preloader.style.transition = "opacity 1s ease";
+      preloader.style.opacity = "0";
+      setTimeout(() => preloader.style.display = "none", 1000);
+    }
+  }, 20); // total ~2 seconds
+});
+
+
+// preloader script end 
