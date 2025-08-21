@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raghav Nahar · Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- Animated background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Header / Navbar -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Go to top"><i class="fa-solid fa-briefcase logo-icon"></i> Raghav
+        Nahar</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer (kept outside header for proper layering) -->
+  <aside class="drawer" id="navDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <a href="#about" class="drawer-link">About</a>
+      <a href="#experience" class="drawer-link">Experience</a>
+      <a href="#projects" class="drawer-link">Projects</a>
+      <a href="#certs" class="drawer-link">Certifications</a>
+      <a href="#contact" class="drawer-link">Contact</a>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim" aria-hidden="true"></div>
+
+  <!-- Hero -->
+  <section id="hero" class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-copy card reveal">
+        <h4 class="lead">Hi, I’m 👋</h4>
+        <h1><span class="grad">Raghav Nahar</span></h1>
+        <p class="lead">
+          Software Engineer turned MBA—specializing in <strong>analytics</strong>, <strong>strategy</strong>, and
+          building <strong>data-driven</strong> products. Always up for exploring challenging roles in Business
+          Analytics, Product Management, and Consulting.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-rocket"></i> View Projects</a>
+          <a class="btn btn-ghost" href="#contact"><i class="fa-regular fa-paper-plane"></i> Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-profile card reveal delay-1">
+        <img src="assets/images/P2421049.JPG" alt="Raghav Nahar" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about-section">
+    <div class="container about-container">
+      <!-- Left Side -->
+      <div class="about-left">
+        <img src="./assets/images/My-image.jpeg" alt="Raghav Nahar" class="profile-pic">
+        <h2 class="tagline">👉 Turning data into strategy, and strategy into impact.</h2>
+      </div>
+
+      <!-- Right Side -->
+      <div class="about-right">
+        <h1>About Me</h1>
+        <p class="intro">
+          Dynamic management professional having 3.5 years of experience in bridging the gap between business and
+          technology.
+          I specialize in automation, process optimization and devising strategic solutions for complex business use
+          cases.
+          I have strengthened my skills by doing an MBA in Business Analytics and Digital Strategy to deliver
+          innovative,
+          data-driven solutions that help businesses thrive.
+        </p>
+
+        <!-- Skill Cards -->
+        <div class="skills-grid">
+          <!-- Business Analysis Specialist -->
+          <div class="skill-card reveal">
+            <div class="icon">📊</div>
+            <h3>Business Analysis Specialist</h3>
+            <p>Skilled at breaking down complex requirements into actionable solutions that deliver measurable impact.
+            </p>
+          </div>
+
+          <!-- Automation Expert -->
+          <div class="skill-card reveal">
+            <div class="icon">⚙️</div>
+            <h3>Automation Expert</h3>
+            <p>Experienced in designing and implementing process automation to reduce inefficiencies and drive
+              operational excellence.</p>
+          </div>
+
+          <!-- Project Management Leader -->
+          <div class="skill-card reveal delay-1">
+            <div class="icon">📋</div>
+            <h3>Project Management Leader</h3>
+            <p>Proficient in managing end-to-end project lifecycles, ensuring timely delivery and alignment with
+              business goals.</p>
+          </div>
+
+          <!-- Data Analytics Professional -->
+          <div class="skill-card reveal delay-1">
+            <div class="icon">📈</div>
+            <h3>Data Analytics Professional</h3>
+            <p>Adept at leveraging SQL, Python, and BI tools to uncover insights and support strategic decision-making.
+            </p>
+          </div>
+        </div>
+
+        <!-- Detailed Paragraph -->
+        <section class="beyond-work hover-lift">
+          <h2>✨ Beyond Work</h2>
+          <div class="beyond-content">
+            <p>I believe growth doesn’t stop at the workplace. Outside of my professional journey, I enjoy exploring new
+              cultures 🌍, keeping up with emerging technologies 💡, and expressing creativity through writing ✍️ and
+              fitness 🏋️‍♂️. These experiences fuel my perspective and help me bring fresh energy to everything I do.
+            </p>
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+        <p class="cta">💼 Let’s connect to explore opportunities in analytics, product, or consulting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- End About Section yes -->
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <h2 class="section-title">My Journey</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card reveal">
+          <div class="timeline-header">
+            <h3>Consultant</h3>
+            <span class="company">Tiger Analytics</span>
+            <span class="tenure">Yet to join (Holding Offer)</span>
+          </div>
+          <ul class="timeline-details">
+            <li>Deliver data-driven insights by analyzing large datasets with SQL, Python/R, and BI tools.</li>
+            <li>Collaborate with cross-functional teams and clients to translate business problems into analytical
+              solutions.</li>
+            <li>Develop & Automate dashboards and reporting frameworks to enhance decision-making and operational
+              efficiency.</li>
+            <li>Optimize processes through statistical modeling and workflow improvements for business impact.</li>
+            <li>Engage with stakeholders to align analytics outcomes with strategic business objectives.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline Item -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card reveal">
+          <div class="timeline-header">
+            <h3>Associate</h3>
+            <span class="company">Cognizant Technology Solutions</span>
+            <span class="tenure">Dec 2022 - May 2024</span>
+          </div>
+          <ul class="timeline-details">
+            <li>Developed a custom purchase order app with ETL automation, reducing issuance time by 85% and manual
+              effort by 80%.
+            </li>
+            <li>Optimized backend systems and MySQL queries, achieving 100% SLA compliance and securing 2000+ billable
+              hours.</li>
+            <li>Spearheaded digital contract system rollout, cutting agreement turnaround time by 90% for a global
+              automotive
+              client.</li>
+            <li>Delivered flawless post-release support, resolving bugs and achieving 99.99% user acceptance with zero
+              production
+              issues.</li>
+            <li>Collaborated across teams to gather requirements and reduced issue resolution time by 25% through
+              structured
+              validation.</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline Item -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card reveal delay-1">
+          <div class="timeline-header">
+            <h3>Programmer Analyst</h3>
+            <span class="company">Cognizant Technology Solutions</span>
+            <span class="tenure">Dec 2020 - Dec 2022</span>
+          </div>
+          <ul class="timeline-details">
+            <li>Revamped web application framework and features, achieving sub-2s response time and boosting user
+              productivity by 60%.</li>
+            <li>Led development of a responsive e-commerce platform, streamlining purchases and enhancing cross-device
+              user experience.</li>
+            <li> Orchestrated client training and enablement, empowering 20+ support staff to manage the application
+              independently post hyper-care.</li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Projects -->
+  <section id="projects" class="about-section">
+    <div class="container">
+      <h2 class="section-title">Projects & Skills</h2>
+      <div class="grid">
+        <article class="proj card hover-lift hover-glass reveal">
+          <div class="proj-head">
+            <i class="fa-brands fa-netflix"></i>
+            <h3 class="project-header"><i class="fa-solid fa-file-invoice-dollar"></i> Purchase Order Automation System
+            </h3>
+          </div>
+          <p class="project-desc">Developed a custom ETL-powered web app to automate order generation and
+            streamline workflows.</p>
+          <div class="tags">
+            <span>SQL</span><span>Data
+              Analysis</span><span>Agile</span><span>JIRA</span><span>Node.js</span><span>AWS</span><span>ETL</span>
+          </div>
+        </article>
+
+        <article class="proj card hover-lift hover-glass reveal delay-1">
+          <div class="proj-head">
+            <h3 class="project-header"><i class="fa-solid fa-file-contract"></i> Digital Contract Management System</h3>
+          </div>
+          <p class="project-desc">Implemented an end-to-end digital contract system to simplify and accelerate contract
+            creation and tracking
+            processes.</p>
+          <div class="tags">
+            <span>Process Modeling</span>
+            <span>Workflow Automation</span>
+            <span>System Integration</span>
+            <span>Requirement Gathering</span>
+            <span>Typescript</span>
+            <span>PostgreSQL</span>
+            <span>AWS</span>
+
+          </div>
+        </article>
+
+        <article class="proj card hover-lift hover-glass reveal delay-1">
+          <div class="proj-head">
+            <h3 class="project-header"><i class="fa-brands fa-netflix"></i> Business Intelligence Dashboard - Netflix
+            </h3>
+          </div>
+          <p class="project-desc">Designed an interactive dashboard to analyze viewership trends, uncovering a 20% rise
+            in regional content
+            demand.</p>
+          <div class="tags">
+            <span>Data Analysis</span>
+            <span>Power BI</span>
+            <span>Data Visualization</span>
+            <span>Business Insights</span>
+            <span>Reporting</span>
+
+          </div>
+        </article>
+
+        <article class="proj card hover-lift hover-glass reveal delay-1">
+          <div class="proj-head">
+            <h3 class="project-header"><i class="fa-solid fa-bicycle"></i> Bike Rental Data Analysis</h3>
+          </div>
+          <p class="project-desc">Analyzed rental patterns with Python to optimize fleet allocation strategies.</p>
+          <div class="tags">
+            <span>Machine Learning</span>
+            <span>EDA</span>
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Matplotlib</span>
+            <span>Predictive insights</span>
+            <span>Scikit-learn</span>
+          </div>
+        </article>
+
+        <article class="proj card hover-lift hover-glass reveal delay-2">
+          <div class="proj-head">
+            <h3 class="project-header"><i class="fa-solid fa-laptop-code"></i> Web Application Modernization</h3>
+          </div>
+          <p class="project-desc">Revamped an existing web application framework to improve responsiveness and enhance
+            user experience.</p>
+          <div class="tags">
+            <span>Performance Optimization</span><span>System
+              Architecture</span><span>Agile</span><span>Typescript</span>
+          </div>
+        </article>
+
+        <article class="proj card hover-lift hover-glass reveal delay-1">
+          <div class="proj-head">
+            <h3 class="project-header"><i class="fa-solid fa-cart-shopping"></i> E-commerce Web Development</h3>
+          </div>
+          <p class="project-desc">Built a responsive e-commerce platform with client specific features and cross-device
+            compatibility</p>
+          <div class="tags">
+            <span>MERN</span>
+            <span>Full-Stack Development</span>
+            <span>Team Leadership</span>
+            <span>UI/UX</span>
+            <span>Documentation</span>
+            <span>API Integration</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Achievements -->
+  <section id="certs" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Certifications & Achievements</h2>
+      <div class="grid grid-4">
+
+        <div class="card mini hover-glass reveal confetti-card">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h4>AWS Cloud Practitioner</h4>
+          <p class="project-desc">(Amazon Web Services)</p>
+        </div>
+
+        <div class="card mini hover-glass reveal confetti-card">
+          <i class="fa-solid fa-scroll"></i>
+          <h4>Certified Agile Professional</h4>
+          <p class="project-desc">(Cognizant Academy)</p>
+        </div>
+
+        <div class="card mini hover-glass reveal confetti-card delay-1">
+          <i class="fa-solid fa-user-graduate"></i>
+          <h4>Masters in Business Analytics</h4>
+          <p class="project-desc">(PGPM, Great Lakes, Gurgaon)</p>
+        </div>
+
+        <div class="card mini hover-glass reveal confetti-card delay-2">
+          <i class="fa-solid fa-trophy"></i>
+          <h4>Mulytics Case Competition Winner</h4>
+          <p class="project-desc">(Master's Union)</p>
+        </div>
+
+        <div class="card mini hover-glass reveal confetti-card delay-2">
+          <i class="fa-solid fa-medal"></i>
+          <h4>National Finalist at Case Competition</h4>
+          <p class="project-desc">(IIM Lucknow)</p>
+        </div>
+
+        <div class="card mini hover-glass reveal confetti-card delay-3">
+          <i class="fa-solid fa-star"></i>
+          <h4>FSE Star & Bronze</h4>
+          <p class="project-desc">(Cognizant Technology Solutions)</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container narrow">
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-grid">
+        <!-- Left Side: Info -->
+        <div class="contact-info card hover-glass reveal">
+          <h3>Get in Touch</h3>
+          <p><i class="fa-solid fa-envelope"></i> nahar16raghav@gmail.com</p>
+          <p><i class="fa-solid fa-location-dot"></i> Pune, India</p>
+
+          <div class="social">
+            <a href="https://www.linkedin.com/in/raghav-nahar-4b7475150/" target="_blank" rel="noreferrer"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/nahar16raghav" target="_blank" rel="noreferrer"><i
+                class="fa-brands fa-github"></i></a>
+            <a href="https://x.com/RaghavNahar" target="_blank" rel="noreferrer"><i
+                class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="contact-form card hover-glass reveal">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <input type="text" name="subject" placeholder="Subject" required />
+            </div>
+            <div class="form-group">
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup Modal -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p>✅ Message sent! Raghav will contact you soon.</p>
+      <button id="closePopup" class="btn">OK</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certs">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+      </div>
+
+      <!-- Socials -->
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/raghav-nahar-4b7475150/" target="_blank"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/nahar16raghav" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:nahar16raghav@email.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Raghav Nahar. All rights reserved.</p>
+      <a href="#top" class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
