@@ -70,7 +70,8 @@ Now Open index.html in any browser.
 
 - 🌍 **Portfolio**: [Portfolio Website](https://raghavnahar.github.io/portfolio-website/)  
 - 💼 **LinkedIn**: [Raghav Nahar](https://www.linkedin.com/in/raghav-nahar-4b7475150/)  
-- 📧 **Email**: [nahar16raghav@gmail.com](mailto:nahar16raghav@gmail.com)  
+- 📧 **Email**: [nahar16raghav@gmail.com](mailto:nahar16raghav@gmail.com)
+- 🤗 **Hugging Face**: [raghavnahar](https://huggingface.co/raghavnahar)
 
 ---
 
